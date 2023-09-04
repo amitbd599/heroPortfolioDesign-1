@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --theme-color: #eeff03;
+  --body-color: #0f0f0f;
+  --text-color: #919295;
+  --card-color: #1e1e22;
+  --btn-color: #404042;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.login__section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 9;
+  padding: 30px 0;
+  /* display: flex;
+  align-items: center; */
+  background-image: url("/asset/img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login__section::before {
+  position: absolute;
+  content: "";
+  background: #00000098;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+.login__section .inner__container {
+  padding: 30px;
+  position: static;
+  max-width: 1280px;
+  padding: 0px 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+.login__section .inner__container .wrapper {
+  display: block;
+  padding: 30px;
+  border-radius: 15px;
+}
+.login__section .inner__container .wrapper nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-color);
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+.login__section .inner__container .wrapper nav .logo img {
+  width: 200px;
+}
+.login__section .inner__container .wrapper nav ul {
+  display: flex;
+  gap: 30px;
+}
+.login__section .inner__container .wrapper nav ul li {
+  list-style: none;
+}
+.login__section .inner__container .wrapper nav ul li a {
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 5px;
+  transition: all 0.2s linear;
+}
+.login__section .inner__container .wrapper nav ul li a.active,
+.login__section .inner__container .wrapper nav ul li a:hover {
+  color: var(--theme-color);
+}
+
+.login__section .inner__container .wrapper nav .toggle_point {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.login__section .inner__container .wrapper nav .toggle_point .mode {
+  display: flex;
+  gap: 15px;
+}
+.login__section .inner__container .wrapper nav .toggle_point .mode .text span {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.login__section
+  .inner__container
+  .wrapper
+  nav
+  .toggle_point
+  .mode
+  .text
+  .active {
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper nav .toggle_point .mode .light_icon {
+  color: var(--theme-color);
+  font-size: 20px;
+}
+.login__section .inner__container .wrapper nav .toggle_point .menu_icon {
+  color: var(--text-color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.login__section .inner__container .wrapper nav .toggle_point .menu_icon:hover {
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper .inner_group {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 60px;
+}
+.login__section .inner__container .wrapper .inner_group .info_card {
+  background: var(--card-color);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+.login__section .inner__container .wrapper .inner_group .info_card .title {
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+  font-weight: 600;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .title
+  .theme {
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper .inner_group .info_card .sub_title {
+  margin-top: 10px;
+  font-weight: 12px;
+  color: var(--text-color);
+}
+.login__section .inner__container .wrapper .inner_group .info_card .img {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.login__section .inner__container .wrapper .inner_group .info_card .email {
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+.login__section .inner__container .wrapper .inner_group .info_card .address {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-color);
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .social_icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .social_icons
+  ul {
+  display: flex;
+  gap: 12px;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .social_icons
+  ul
+  li {
+  list-style: none;
+}
+
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .social_icons
+  ul
+  li
+  a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--btn-color);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .social_icons
+  ul
+  li
+  i {
+  display: block;
+  font-size: 18px;
+  color: var(--text-color);
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .social_icons
+  ul
+  li:hover
+  i {
+  transition: all 0.2s linear;
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper .inner_group .info_card .my_btn {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+.login__section .inner__container .wrapper .inner_group .info_card .my_btn a {
+  color: var(--theme-color);
+  padding: 10px 35px;
+  border-radius: 100px;
+  background: var(--theme-color);
+  border: 2px solid var(--theme-color);
+  font-size: 16px;
+  color: var(--card-color);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .info_card
+  .my_btn
+  a:hover {
+  background: transparent;
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper .inner_group .home .tag {
+  border: 1px solid var(--text-color);
+  display: inline-block;
+  border-radius: 100px;
+  padding: 6px 30px;
+  color: #fff;
+}
+.login__section .inner__container .wrapper .inner_group .home .tag .box {
+  display: flex;
+  gap: 10px;
+}
+.login__section .inner__container .wrapper .inner_group .home .tag .box i {
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper .inner_group .home .intro {
+  margin-top: 40px;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .home
+  .intro
+  .sub_title {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.login__section .inner__container .wrapper .inner_group .home .intro .title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+}
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .home
+  .intro
+  .title
+  span {
+  color: var(--theme-color);
+}
+
+.login__section .inner__container .wrapper .inner_group .home .intro .des {
+  font-size: 16px;
+  margin-top: 15px;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+.login__section .inner__container .wrapper .inner_group .home .counter {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__section
+  .inner__container
+  .wrapper
+  .inner_group
+  .home
+  .counter
+  .item
+  h2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--theme-color);
+}
+.login__section .inner__container .wrapper .inner_group .home .counter .item p {
+  font-size: 18px;
+  color: var(--text-color);
+}
